@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Adrien Rollot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Adrien Rollot</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Bienvenue sur mon Portfolio</h2>
+            <p>Étudiant en marketing sportif et passionné par les projets digitaux innovants.</p>
+            <a href="#portfolio" class="btn">Découvrez mes projets</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <div class="content">
+                <img src="profil.jpg" alt="Photo de Adrien Rollot">
+                <p>Je suis Adrien Rollot, étudiant en Licence de commercialisation de produits et services sportifs à l'ILEPS et alternant chez Fitness Park. J’aime relever des défis en combinant sport, marketing et digital pour créer des expériences uniques.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Mes Projets</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="projet1.jpg" alt="Projet 1">
+                    <h3>Campagne Black Friday</h3>
+                    <p>Stratégie et communication pour augmenter les adhésions chez Fitness Park.</p>
+                </div>
+                <div class="project">
+                    <img src="projet2.jpg" alt="Projet 2">
+                    <h3>Réseaux Sociaux</h3>
+                    <p>Gestion du compte Instagram Fitness Park La Défense avec une augmentation de 30 % des interactions.</p>
+                </div>
+                <div class="project">
+                    <img src="projet3.jpg" alt="Projet 3">
+                    <h3>Plan Marketing</h3>
+                    <p>Création et optimisation de plans d’action marketing sur divers projets sportifs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-moi</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Adrien Rollot. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
