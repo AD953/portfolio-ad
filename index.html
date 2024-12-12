@@ -1,96 +1,239 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Adrien Rollot</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>Adrien Rollot</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+/* Reset de styles par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h2>Bienvenue sur mon Portfolio</h2>
-            <p>Étudiant en marketing sportif et passionné par les projets innovants.</p>
-            <a href="#portfolio" class="btn">Découvrez mes projets</a>
-        </div>
-    </section>
+/* Corps de la page */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>À propos de moi</h2>
-            <div class="content">
-                <img src="profil.jpg" alt="Photo de Adrien Rollot">
-                <p>Je suis Adrien Rollot, étudiant en Licence de commercialisation de produits et services sportifs à l'ILEPS et alternant chez Fitness Park. J’aime relever des défis en combinant sport, marketing et digital pour créer des expériences uniques.</p>
-            </div>
-        </div>
-    </section>
+/* Structure du conteneur principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2>Mes Projets</h2>
-            <div class="projects">
-                <div class="project">
-                    <img src="projet1.jpg" alt="Projet 1">
-                    <h3>Mise en place de stage découverte</h3>
-                    <p>Mise en place de stage de nouvelles activité ouvert a tous afins d'augmenter le nombre d'adhérent ou de les upgrader sur un abonnement supérieur.</p>
-                </div>
-                <div class="project">
-                    <img src="projet2.jpg" alt="Projet 2">
-                    <h3>Mise en place d'opération commerciales</h3>
-                    <p>Gestion du compte Instagram Fitness Park La Défense avec une augmentation de 30 % des interactions.</p>
-                </div>
-                <div class="project">
-                    <img src="projet3.jpg" alt="Projet 3">
-                    <h3>Plan Marketing</h3>
-                    <p>Création et optimisation de plans d’action marketing sur divers projets sportifs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contactez-moi</h2>
-            <form action="submit_form.php" method="post">
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" required>
+header h1 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+}
 
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-top: 20px;
+}
 
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+header nav li {
+  margin: 0 20px;
+}
 
-                <button type="submit" class="btn">Envoyer</button>
-            </form>
-        </div>
-    </section>
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1em;
+}
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2024 Adrien Rollot. Tous droits réservés.</p>
-        </div>
-    </footer>
-</body>
-</html>
+header nav a:hover {
+  color: #007bff;
+}
+
+/* Section Hero */
+.hero {
+  background: #007bff;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background-color: #fff;
+  color: #007bff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.hero .btn:hover {
+  background-color: #f4f4f9;
+}
+
+/* Section À propos */
+#about {
+  background-color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#about .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+#about img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+#about p {
+  font-size: 1.2em;
+  color: #555;
+  max-width: 700px;
+}
+
+/* Section Portfolio */
+#portfolio {
+  background-color: #f4f4f9;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#portfolio h2 {
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.project {
+  background-color: #fff;
+  padding: 20px;
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+}
+
+.project img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project h3 {
+  font-size: 1.5em;
+  margin-top: 15px;
+  color: #333;
+}
+
+.project p {
+  font-size: 1em;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Section Contact */
+#contact {
+  background-color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1em;
+}
+
