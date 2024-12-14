@@ -8,66 +8,113 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#formations">Formations</a></li>
+            <li><a href="#experiences">Expériences</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#interets">Centres d'intérêt</a></li>
+            <li><button onclick="toggleTheme()">Mode Sombre</button></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
     <header>
         <h1>Adrien Rollot - CV</h1>
-        <p>Contact: 06.42.81.62.19 | a.rollot@ileps.fr | 56 rue René Clair, 95310 St Ouen l'Aumône</p>
-        <p><a href="https://www.linkedin.com/in/adrien-rollot" target="_blank">LinkedIn</a></p>
+        <p>Contact: 06.42.81.62.19 | a.rollot@ileps.fr</p>
     </header>
 
+    <!-- Profile Section -->
     <div class="container">
-        <div class="profile">
-            <img src="IMG_8829.JPG" alt="Photo de Adrien Rollot">
+        <section id="profil" class="profile">
+            <img src="profile.jpg" alt="Photo de Adrien Rollot">
             <div>
                 <h2>Adrien Rollot</h2>
-                <p>Étudiant en licence professionnelle de Commercialisation de Produits et Services Sportifs.</p>
+                <p>Étudiant en licence professionnelle de Commercialisation de Produits et Services Sportifs à l'ILEPS.</p>
             </div>
-        </div>
-
-        <section>
-            <h2>Profil</h2>
-            <p>Étudiant de 3ème année en licence professionnelle de Commercialisation de Produits et Services Sportifs à l'ILEPS, je travaille actuellement aux Cercles de la Forme en tant que Commercial.</p>
         </section>
 
-        <section>
+        <!-- Formations Section -->
+        <section id="formations">
             <h2>Formations</h2>
             <ul>
-                <li><strong>2022-2025</strong> - ILEPS Cergy : Licence Professionnelle Commercialisation de Produits et Services Sportifs</li>
-                <li><strong>2019-2022</strong> - Lycée Edmond Rostand, St Ouen l'Aumône : Baccalauréat général, spécialités Histoire-Géographie, Géopolitique et Sciences Politiques, Anglais Monde Contemporain</li>
+                <li><strong>2022-2025</strong> - Licence Professionnelle CPSS, ILEPS Cergy</li>
+                <li><strong>2019-2022</strong> - Baccalauréat général, Lycée Edmond Rostand</li>
             </ul>
         </section>
 
-        <section>
+        <!-- Experiences Section -->
+        <section id="experiences">
             <h2>Expériences</h2>
             <ul>
-                <li><strong>Commercial</strong> - Les Cercles de la Forme, Paris (Septembre 2023 - Aujourd’hui)<br>Prospection commerciale, accueil et conseil client, gestion de la salle de sport et coordination des plannings.</li>
-                <li><strong>Vendeur Cycle/Randonnée/Fitness</strong> - Intersport Aren'Park, Cergy (Avril - Juin 2023)<br>Accueil et conseil client, réception et rangement de marchandises, merchandising.</li>
-                <li><strong>Vendeur Polyvalent</strong> - Go Sport La Défense, Puteaux (Décembre 2022 - Janvier 2023)<br>Accueil, vente, facing, Click & Collect.</li>
-                <li><strong>Équipier Polyvalent</strong> - Los Pollos, La Défense (Août 2022)<br>Prise de commande, service à table, entretien de la salle.</li>
-                <li><strong>Bénévole</strong> - Garmin Triathlon Paris 2023</li>
+                <li><strong>Commercial</strong> - Les Cercles de la Forme (2023 - Aujourd'hui)</li>
+                <li><strong>Vendeur</strong> - Intersport et Go Sport</li>
+                <li><strong>Équipier Polyvalent</strong> - Los Pollos</li>
+                <li><strong>Bénévole</strong> - Garmin Triathlon Paris</li>
             </ul>
         </section>
 
-        <section>
-            <h2>Compétences et Langues</h2>
+        <!-- Competences Section -->
+        <section id="competences">
+            <h2>Compétences</h2>
             <ul>
                 <li>Anglais : Niveau B2</li>
                 <li>Espagnol : Niveau B1</li>
-                <li>Maîtrise de la Suite Office, Xplor Resamania, Lead</li>
+                <li>Maîtrise de la Suite Office, Xplor Resamania</li>
             </ul>
         </section>
 
-        <section>
-            <h2>Centres d'Intérêt</h2>
+        <!-- Centres d'intérêt Section -->
+        <section id="interets">
+            <h2>Centres d'intérêt</h2>
             <ul>
-                <li>Voyages : Brésil, Écosse, Angleterre, Italie, Portugal, Espagne, Tunisie et Maroc</li>
-                <li>Sport : Judo, rugby, musculation, handball, futsal, basket, boxe, football américain</li>
-                <li>Autres : Cinéma, actualités, histoire</li>
+                <li>Voyages : Brésil, Écosse, Italie</li>
+                <li>Sports : Judo, rugby, musculation</li>
+                <li>Cinéma, actualités, histoire</li>
             </ul>
+        </section>
+
+        <!-- Formulaire de Contact -->
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <form action="https://example.com/form-handler" method="post">
+                <input type="text" name="name" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <textarea name="message" placeholder="Votre message" rows="4" required></textarea>
+                <input type="submit" value="Envoyer">
+            </form>
         </section>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Adrien Rollot. Tous droits réservés.</p>
     </footer>
+
+    <!-- Bouton Retour en Haut -->
+    <div id="toTop">↑</div>
+
+    <!-- Scripts -->
+    <script>
+        // Bouton retour en haut
+        window.onscroll = function() {
+            const toTop = document.getElementById("toTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                toTop.style.display = "block";
+            } else {
+                toTop.style.display = "none";
+            }
+        };
+        document.getElementById("toTop").onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        // Mode sombre
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
 </body>
 </html>
