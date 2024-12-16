@@ -1,58 +1,62 @@
+/* Bouton LinkedIn */
+button.linkedin-btn {
+    display: inline-block;
+    background: #0077b5; /* Couleur officielle LinkedIn */
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+button.linkedin-btn:hover {
+    background: #005582;
+    transform: translateY(-3px);
+}
+
 /* Section styles */
 section {
-    background: #fdfdfd;
+    background: #ffffff; /* Fond blanc net */
     padding: 30px;
     margin-bottom: 40px;
     border-radius: 12px;
+    border: 2px solid #d6e4f2; /* Bordure plus visible */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-left: 8px solid #3a6fa5; /* Accent de couleur */
     transition: transform 0.4s, box-shadow 0.4s, background-color 0.3s;
 }
 section:hover {
     transform: translateY(-12px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-    background-color: #eef4fb; /* Couleur légèrement plus foncée pour l’effet hover */
+    background-color: #f9fbfe; /* Couleur légèrement contrastée */
 }
 
-/* Section headings */
+/* Titres de section */
 h2 {
     font-size: 2.2em;
     color: #1e3c58;
     margin-bottom: 20px;
     border-bottom: 4px solid #3a6fa5;
     padding-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
     background: linear-gradient(to right, #f7f9fc, #eef4fb);
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark theme styles for sections */
-body.dark-theme section {
-    background: #242424;
-    border-left: 8px solid #555; /* Accent gris pour le mode sombre */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-}
-body.dark-theme section:hover {
-    background: #2e2e2e; /* Plus clair au survol */
-}
-body.dark-theme h2 {
-    color: #dddddd;
-    background: linear-gradient(to right, #333, #444);
-    border-bottom: 4px solid #555;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-}
-
-/* Specific elements (e.g., profile section) */
+/* Profil */
 .profile {
-    background: #fdfdfd;
+    background: #ffffff; /* Fond plus clair */
     padding: 40px;
     margin-bottom: 50px;
     border-radius: 12px;
+    border: 2px solid #d6e4f2; /* Bordure plus visible */
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    border-left: 8px solid #3a6fa5; /* Accent sur le profil */
     transition: transform 0.4s, box-shadow 0.4s, background-color 0.3s;
 }
 .profile:hover {
@@ -61,27 +65,49 @@ body.dark-theme h2 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* List styles (inside sections like Compétences or Centres d'intérêt) */
+/* List styles */
 ul li {
-    background: #f7f9fc;
+    background: #fdfdfd; /* Fond clair distinct */
     padding: 20px;
     margin: 12px 0;
-    border-left: 6px solid #3a6fa5;
+    border-left: 6px solid #3a6fa5; /* Accent sur la bordure */
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     transition: background 0.3s, border-left-color 0.3s, transform 0.3s;
 }
 ul li:hover {
-    background: #eef4fb;
+    background: #f0f5fc; /* Fond au survol */
     border-left-color: #1e3c58;
     transform: scale(1.02);
+}
+
+/* Mode sombre */
+body.dark-theme section {
+    background: #2c2c2c;
+    border: 2px solid #555; /* Bordure plus visible */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+body.dark-theme section:hover {
+    background: #333;
+}
+body.dark-theme h2 {
+    color: #dddddd;
+    background: linear-gradient(to right, #333, #444);
+    border-bottom: 4px solid #555;
 }
 body.dark-theme ul li {
     background: #2b2b2b;
     border-left-color: #555;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 body.dark-theme ul li:hover {
     background: #333;
     border-left-color: #777;
+}
+
+/* Bouton LinkedIn (mode sombre) */
+body.dark-theme button.linkedin-btn {
+    background: #005582;
+}
+body.dark-theme button.linkedin-btn:hover {
+    background: #003952;
 }
