@@ -3,88 +3,124 @@ button.linkedin-btn {
     display: inline-block;
     background: #0077b5; /* Couleur officielle LinkedIn */
     color: white;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 12px 25px;
     margin-top: 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 50px; /* Forme arrondie élégante */
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Ombre subtile */
 }
 button.linkedin-btn:hover {
-    background: #005582;
+    background: #005582; /* Couleur LinkedIn plus foncée */
     transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Effet hover plus visible */
+}
+button.linkedin-btn:active {
+    transform: translateY(0); /* Supprime l’effet hover au clic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Section styles */
-section {
-    background: #ffffff; /* Fond blanc net */
-    padding: 30px;
-    margin-bottom: 40px;
-    border-radius: 12px;
-    border: 2px solid #d6e4f2; /* Bordure plus visible */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s, box-shadow 0.4s, background-color 0.3s;
-}
-section:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-    background-color: #f9fbfe; /* Couleur légèrement contrastée */
-}
-
-/* Titres de section */
-h2 {
-    font-size: 2.2em;
-    color: #1e3c58;
-    margin-bottom: 20px;
-    border-bottom: 4px solid #3a6fa5;
-    padding-bottom: 12px;
-    background: linear-gradient(to right, #f7f9fc, #eef4fb);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Profil */
+/* Ajustement dans la section profil */
 .profile {
-    background: #ffffff; /* Fond plus clair */
+    display: flex;
+    align-items: center;
+    background: #ffffff; /* Fond clair */
     padding: 40px;
     margin-bottom: 50px;
     border-radius: 12px;
-    border: 2px solid #d6e4f2; /* Bordure plus visible */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid #d6e4f2; /* Bordure élégante */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Ombre subtile */
     transition: transform 0.4s, box-shadow 0.4s, background-color 0.3s;
 }
 .profile:hover {
     transform: scale(1.05);
-    background: #eef4fb;
+    background: #f8faff; /* Fond légèrement teinté au survol */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.profile img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-right: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Ombre subtile pour l’image */
+}
+.profile div {
+    flex: 1;
+    text-align: left;
+}
+.profile h2 {
+    font-size: 2.2em;
+    margin: 0 0 12px;
+    color: #3a6fa5;
+}
+.profile p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Section Styles */
+section {
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    border: 2px solid #d6e4f2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s, box-shadow 0.4s, background-color 0.3s;
+}
+section:hover {
+    transform: translateY(-10px);
+    background-color: #f9fbfe;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 /* List styles */
 ul li {
-    background: #fdfdfd; /* Fond clair distinct */
+    background: #fdfdfd;
     padding: 20px;
     margin: 12px 0;
-    border-left: 6px solid #3a6fa5; /* Accent sur la bordure */
+    border-left: 6px solid #3a6fa5;
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     transition: background 0.3s, border-left-color 0.3s, transform 0.3s;
 }
 ul li:hover {
-    background: #f0f5fc; /* Fond au survol */
+    background: #eef4fb;
     border-left-color: #1e3c58;
     transform: scale(1.02);
 }
 
+/* Footer Styles */
+footer {
+    background: #1e3c58;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-top: 5px solid #3a6fa5;
+    font-size: 1.1em;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+footer p {
+    margin: 0;
+}
+footer button.linkedin-btn {
+    margin-top: 15px;
+}
+
 /* Mode sombre */
+body.dark-theme {
+    background: #121212;
+    color: #dddddd;
+}
 body.dark-theme section {
-    background: #2c2c2c;
-    border: 2px solid #555; /* Bordure plus visible */
+    background: #242424;
+    border: 2px solid #555;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 body.dark-theme section:hover {
@@ -103,8 +139,6 @@ body.dark-theme ul li:hover {
     background: #333;
     border-left-color: #777;
 }
-
-/* Bouton LinkedIn (mode sombre) */
 body.dark-theme button.linkedin-btn {
     background: #005582;
 }
